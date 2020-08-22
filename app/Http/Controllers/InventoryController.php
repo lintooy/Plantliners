@@ -119,6 +119,8 @@ class InventoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        // $inventory = Inventory::find($id);
+        // return $inventory;
+        return 'Henlo';
     }
 }
