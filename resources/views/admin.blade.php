@@ -528,7 +528,6 @@
                             style="display: none;">
                             @csrf
                         </form>
-                        <!-- <a class="btn btn-primary" href="login.html">Logout</a> -->
                     </div>
                 </div>
             </div>
