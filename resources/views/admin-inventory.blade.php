@@ -243,6 +243,7 @@
                                     <hr>
                                     <span class="badge badge-light">Fruit</span>
                                     &nbsp;
+                                    <span class="badge badge-light">Banana</span>
                                     <span class="badge badge-light">Rakatan</span>
                                     <hr>
                                     Freshly picked bananas from the lush mountains of Talamban. Stored in crates.
@@ -278,6 +279,7 @@
                                     <hr>
                                     <span class="badge badge-light">Fruit</span>
                                     &nbsp;
+                                    <span class="badge badge-light">Banana</span>
                                     <span class="badge badge-light">Rakatan</span>
                                     <hr>
                                     Freshly picked bananas from the lush mountains of Talamban. Stored in crates.
@@ -313,6 +315,7 @@
                                     <hr>
                                     <span class="badge badge-light">Fruit</span>
                                     &nbsp;
+                                    <span class="badge badge-light">Banana</span>
                                     <span class="badge badge-light">Rakatan</span>
                                     <hr>
                                     Freshly picked bananas from the lush mountains of Talamban. Stored in crates.
