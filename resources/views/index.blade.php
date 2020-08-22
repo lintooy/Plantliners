@@ -27,7 +27,7 @@
 
             <div class="row col-md-12">
                 <div class="col-md-8" style="margin-left:9%; margin-top:3%;">
-                    <img src="assets/img/plantliners.png" alt="" />
+                    <img src="{{asset('img/plantliners.png')}}" alt="" />
                     <h2 class="description">A centralized platform for our country's unsung heroes.</h2>
                 </div>
             </div>
