@@ -13,7 +13,8 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon">
-                    <img src="{{asset('img/plantliners_logo_alt.png')}}" alt="" style="height:auto; width: 100%; margin-top: 20px">
+                    <img src="{{asset('img/plantliners_logo_alt.png')}}" alt=""
+                        style="height:auto; width: 100%; margin-top: 20px">
                 </div>
             </a>
 
@@ -176,7 +177,8 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600"><strong>{{ Auth::user()->name }}</strong></span>
+                                <span
+                                    class="mr-2 d-none d-lg-inline text-gray-600"><strong>{{ Auth::user()->name }}</strong></span>
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -218,7 +220,8 @@
                     <!-- Content Row -->
                     <div class="row">
                         <div class="col-md-12 mb-4">
-                            <a href="#" class="btn btn-success btn-icon-split">
+                            <a href="#" class="btn btn-success btn-icon-split" data-toggle="modal"
+                                data-target="#addProductModal">
                                 <span class="icon text-white-50">
                                     <i class="fas fa-plus"></i>
                                 </span>
@@ -438,6 +441,56 @@
                             @csrf
                         </form>
                     </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Product Modal -->
+        <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-labelledby="addProductModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold" id="addProductModalLabel">Add Product
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form>
+                        <div class="modal-body mx-3">
+                            <div class="form-group">
+                                <label for="email1">Product Name</label>
+                                <select class="form-control" id="sel1">
+                                    <option>Banana</option>
+                                    <option>Cabbage</option>
+                                    <option>Carrots</option>
+                                    <option>Apply</option>
+                                </select>
+                                <label>Category</label>
+                                <input type="text" class="form-control" id="category" name="text" value="Banana"
+                                    readonly>
+                                <label>Quantity</label>
+                                <input type="number" class="form-control" id="price" name="price"
+                                    placeholder="Enter Price">
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <label>Price</label>
+                                        <input type="number" class="form-control" id="qty" name="qty"
+                                            placeholder="Enter quantity">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label>UM</label>
+                                        <input type="text" class="form-control" id="um" name="um" value="kg" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
