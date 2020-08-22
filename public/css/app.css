@@ -26486,7 +26486,7 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
-.nav-link {
+#nav-link {
   color: black;
   font-weight: bold;
   font-size: xxx-large;
