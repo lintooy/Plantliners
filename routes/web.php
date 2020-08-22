@@ -25,6 +25,7 @@ Route::post('/user/logout', 'Auth\LoginController@userLogout')->name('user.logou
 Route::prefix('farmer')->group(function () {
     // Dashboard route
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
+    Route::get('/inventory', 'AdminController@inventory')->name('admin.inventory');
 
     // Login routes
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

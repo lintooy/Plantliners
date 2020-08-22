@@ -13,7 +13,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
                 <div class="sidebar-brand-icon">
-                    <img src="img/plantliners_logo_alt.png" alt="" style="height:auto; width: 100%; margin-top: 20px">
+                    <img src="{{asset('img/plantliners_logo_alt.png')}}" alt="" style="height:auto; width: 100%; margin-top: 20px">
                 </div>
             </a>
 
@@ -36,7 +36,7 @@
             </div>
 
             <li class="nav-item">
-                <a class="nav-link" href="farmer-inventory.html">
+                <a class="nav-link" href="{{route('admin.inventory')}}">
                     <i class="fas fa-fw fa-boxes"></i>
                     <span>View Inventory</span></a>
             </li>
