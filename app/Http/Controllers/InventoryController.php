@@ -29,8 +29,6 @@ class InventoryController extends Controller
     public function index()
     {
         $inventories = Inventory::all();
-        // $user = Auth::user();
-        // $inventories = Inventory::where('farmerID', $user->id);
         $products = Product::all();
         return view('admin-inventory')->with('inventories', $inventories)->with('products', $products);
     }
