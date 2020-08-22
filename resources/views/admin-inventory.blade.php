@@ -260,7 +260,8 @@
                                         </span>
                                         <span class="text">Update</span>
                                     </a>
-                                    <a href="#" class="btn btn-danger btn-icon-split">
+                                    
+                                    <a href="{{ route('admin.inventory.delete',$inventory->inventoryID)}}" class="btn btn-danger btn-icon-split">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-times"></i>
                                         </span>

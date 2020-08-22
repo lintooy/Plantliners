@@ -30,7 +30,7 @@ Route::prefix('farmer')->group(function () {
     Route::get('/inventory/submit', 'InventoryController@store')->name('admin.inventory.submit');
 
     //delete data
-    // Route::get('/inventory/delete', 'InventoryController@destroy')->name('admin.inventory.delete');
+    Route::get('/inventory/{inventoryID}', 'InventoryController@destroy')->name('admin.inventory.delete');
 
     // Login routes
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
