@@ -28,15 +28,9 @@ Route::prefix('farmer')->group(function () {
     Route::get('/inventory', 'InventoryController@index')->name('admin.inventory');
     //insert data
     Route::get('/inventory/submit', 'InventoryController@store')->name('admin.inventory.submit');
-
-<<<<<<< HEAD
     //delete data
     Route::get('/inventory/{inventoryID}', 'InventoryController@destroy')->name('admin.inventory.delete');
 
-=======
-    //Delete data
-    Route::get('/inventory/delete', 'InventoryController@destroy')->name('admin.inventory.delete');
->>>>>>> master
     // Login routes
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'Auth\AdminLoginController@login')->name('admin.login.submit');
