@@ -70,21 +70,21 @@
             <h1 class="text-center font-weight-bold" style="font-size: 50px;color:white; margin-top:3%;">The Team</h1>
         </div>
         <div class="row col-md-12" style="margin-top:5%;margin-left:auto;margin-right:auto;">
-            <div class="col-md-2" style="margin: auto;">
+            <div class="col-md-2 " style="margin: auto;">
             
-                <img src="{{asset('img/person.png')}}" alt="" />
+                <img id="prof_img" src="{{asset('img/miko.png')}}" alt="" />
                 <h4 class="font-weight-bold text-center" style="color:white; ">Michael Korllon Aninon</h4>
             </div>
             <div class="col-md-2" style="margin: auto;">
-                <img src="{{asset('img/person.png')}}" alt="" />
+                <img id="prof_img" src="{{asset('img/bryl.png')}}" alt="" />
                 <h4 class="font-weight-bold text-center" style="color:white;">Bryl Kezter Lim</h4>
             </div>
             <div class="col-md-2" style="margin: auto;">
-                <img src="{{asset('img/person.png')}}" alt="" />
+                <img id="prof_img"  src="{{asset('img/ian.png')}}" alt="" />
                 <h4 class="font-weight-bold text-center" style="color:white;">Ian Lindley Olmoguez</h4>
             </div>
             <div class="col-md-2" style="margin: auto;">
-                <img src="{{asset('img/person.png')}}" alt="" />
+                <img id="prof_img" src="{{asset('img/justin.png')}}" alt="" />
                 <h4 class="font-weight-bold text-center" style="color:white;">Justin Manigo</h4>
             </div>
 
