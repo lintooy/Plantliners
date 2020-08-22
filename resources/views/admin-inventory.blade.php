@@ -232,7 +232,49 @@
 
                     <div class="row">
 
-                        <div class="col-md-3">
+                    @if(count($inventories) > 0)
+                    @foreach($inventories as $inventory)
+                    <div class="col-md-3">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h6 class="m-0 font-weight-bold text-primary">{{ \Illuminate\Support\Facades\DB::table('products')->where('productID',$inventory->productID)->value('productName')}}</h6>
+                                </div>
+                                <div class="card-body">
+                                    <img src="https://www.pngmart.com/files/1/Banana-PNG.png" alt=""
+                                        style="height:auto; width: 100%">
+                                    <hr>
+                                    <span class="badge badge-light">Fruit</span>
+                                    &nbsp;
+                                    <span class="badge badge-light">Rakatan</span>
+                                    <hr>
+                                    Freshly picked bananas from the lush mountains of Talamban. Stored in crates.
+                                    <hr>
+                                    <p>Unit: <strong>{{ \Illuminate\Support\Facades\DB::table('products')->where('productID',$inventory->productID)->value('unitMeasurement')}}</strong></p>
+                                    <p>Quantity: <strong>{{$inventory->qty}}</strong></p>
+                                    <p>Price: <strong>₱{{$inventory->price}}</strong></p>
+                                    <hr>
+                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal"
+                                data-target="#updateProductModal">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-edit"></i>
+                                        </span>
+                                        <span class="text">Update</span>
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-icon-split">
+                                        <span class="icon text-white-50">
+                                            <i class="fas fa-times"></i>
+                                        </span>
+                                        <span class="text">Remove</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    @else
+                    <p>No Products Found</p>
+                    @endif
+
+                        <!-- <div class="col-md-3">
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
                                     <h6 class="m-0 font-weight-bold text-primary">Banana</h6>
@@ -341,7 +383,7 @@
                                     </a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
                     </div>
 
@@ -466,14 +508,14 @@
                             <div class="form-group">
                                 <label for="email1">Product Name</label>
                                 <select class="form-control" id="sel1">
-                                    <option>Banana</option>
-                                    <option>Cabbage</option>
-                                    <option>Carrots</option>
-                                    <option>Apply</option>
+                                    @if(count($products) > 0)
+                                    @foreach($products as $product)
+                                    <option>{{$product->productName}}</option>
+                                    @endforeach
+                                    @else
+                                    <p>No available products</p>
+                                    @endif
                                 </select>
-                                <label>Category</label>
-                                <input type="text" class="form-control" id="category" name="text" value="Fruits"
-                                    readonly>
                                 <label>Quantity</label>
                                 <input type="number" class="form-control" id="qty" name="qty"
                                     placeholder="Enter Quantity">

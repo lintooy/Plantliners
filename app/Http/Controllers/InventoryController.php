@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Inventory;
+use App\Product;
 
 class InventoryController extends Controller
 {
@@ -26,7 +27,8 @@ class InventoryController extends Controller
     public function index()
     {
         $inventories = Inventory::all();
-        return view('admin-inventory')->with('inventories', $inventories);
+        $products = Product::all();
+        return view('admin-inventory')->with('inventories', $inventories)->with('products', $products);
     }
 
     /**
