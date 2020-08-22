@@ -21,6 +21,7 @@ class CreateProductsTable extends Migration
             $table->string('unitMeasurement');
             $table->float('lowestPrice');
             $table->float('highestPrice');
+			$table->string('productImg');
             $table->timestamps();
         });
     }

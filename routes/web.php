@@ -26,6 +26,8 @@ Route::prefix('farmer')->group(function () {
     // Dashboard route
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::get('/inventory', 'InventoryController@index')->name('admin.inventory');
+    //insert data
+    Route::post('/inventory', 'InventoryController@store')->name('admin.inventory.submit');
 
     // Login routes
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');
@@ -43,4 +45,6 @@ Route::prefix('farmer')->group(function () {
     Route::post('/password/email', 'Auth\AdminForgotPasswordController@sendResetLinkEmail')->name('admin.password.email');
     Route::get('/password/reset/{token}', 'Auth\AdminResetPasswordController@showResetForm')->name('admin.password.reset');
     Route::post('/password/reset', 'Auth\AdminResetPasswordController@reset')->name('admin.password.update');
+
+    
 });

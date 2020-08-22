@@ -240,14 +240,14 @@
                                     <h6 class="m-0 font-weight-bold text-primary">{{ \Illuminate\Support\Facades\DB::table('products')->where('productID',$inventory->productID)->value('productName')}}</h6>
                                 </div>
                                 <div class="card-body">
-                                    <img src="https://www.pngmart.com/files/1/Banana-PNG.png" alt=""
+                                    <img src="{{ \Illuminate\Support\Facades\DB::table('products')->where('productID',$inventory->productID)->value('productImg')}}" alt=""
                                         style="height:auto; width: 100%">
                                     <hr>
-                                    <span class="badge badge-light">Fruit</span>
+                                    <span class="badge badge-light">{{ \Illuminate\Support\Facades\DB::table('categories')->where('categoryID',$inventory->categoryID)->value('categoryName')}}</span>
                                     &nbsp;
                                     <span class="badge badge-light">Rakatan</span>
                                     <hr>
-                                    Freshly picked bananas from the lush mountains of Talamban. Stored in crates.
+                                    {{$inventory->productDescription}}
                                     <hr>
                                     <p>Unit: <strong>{{ \Illuminate\Support\Facades\DB::table('products')->where('productID',$inventory->productID)->value('unitMeasurement')}}</strong></p>
                                     <p>Quantity: <strong>{{$inventory->qty}}</strong></p>
@@ -273,117 +273,6 @@
                     @else
                     <p>No Products Found</p>
                     @endif
-
-                        <!-- <div class="col-md-3">
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Banana</h6>
-                                </div>
-                                <div class="card-body">
-                                    <img src="https://www.pngmart.com/files/1/Banana-PNG.png" alt=""
-                                        style="height:auto; width: 100%">
-                                    <hr>
-                                    <span class="badge badge-light">Fruit</span>
-                                    &nbsp;
-                                    <span class="badge badge-light">Banana</span>
-                                    <span class="badge badge-light">Rakatan</span>
-                                    <hr>
-                                    Freshly picked bananas from the lush mountains of Talamban. Stored in crates.
-                                    <hr>
-                                    <p>Unit: <strong>kg</strong></p>
-                                    <p>Quantity: <strong>324</strong></p>
-                                    <p>Price: <strong>₱90.00</strong></p>
-                                    <hr>
-                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal"
-                                data-target="#updateProductModal">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-edit"></i>
-                                        </span>
-                                        <span class="text">Update</span>
-                                    </a>
-                                    <a href="#" class="btn btn-danger btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-times"></i>
-                                        </span>
-                                        <span class="text">Remove</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Banana</h6>
-                                </div>
-                                <div class="card-body">
-                                    <img src="https://www.pngmart.com/files/1/Banana-PNG.png" alt=""
-                                        style="height:auto; width: 100%">
-                                    <hr>
-                                    <span class="badge badge-light">Fruit</span>
-                                    &nbsp;
-                                    <span class="badge badge-light">Banana</span>
-                                    <span class="badge badge-light">Rakatan</span>
-                                    <hr>
-                                    Freshly picked bananas from the lush mountains of Talamban. Stored in crates.
-                                    <hr>
-                                    <p>Unit: <strong>kg</strong></p>
-                                    <p>Quantity: <strong>324</strong></p>
-                                    <p>Price: <strong>₱90.00</strong></p>
-                                    <hr>
-                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal"
-                                data-target="#updateProductModal">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-edit"></i>
-                                        </span>
-                                        <span class="text">Update</span>
-                                    </a>
-                                    <a href="#" class="btn btn-danger btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-times"></i>
-                                        </span>
-                                        <span class="text">Remove</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Banana</h6>
-                                </div>
-                                <div class="card-body">
-                                    <img src="https://www.pngmart.com/files/1/Banana-PNG.png" alt=""
-                                        style="height:auto; width: 100%">
-                                    <hr>
-                                    <span class="badge badge-light">Fruit</span>
-                                    &nbsp;
-                                    <span class="badge badge-light">Banana</span>
-                                    <span class="badge badge-light">Rakatan</span>
-                                    <hr>
-                                    Freshly picked bananas from the lush mountains of Talamban. Stored in crates.
-                                    <hr>
-                                    <p>Unit: <strong>kg</strong></p>
-                                    <p>Quantity: <strong>324</strong></p>
-                                    <p>Price: <strong>₱90.00</strong></p>
-                                    <hr>
-                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal"
-                                data-target="#updateProductModal">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-edit"></i>
-                                        </span>
-                                        <span class="text">Update</span>
-                                    </a>
-                                    <a href="#" class="btn btn-danger btn-icon-split">
-                                        <span class="icon text-white-50">
-                                            <i class="fas fa-times"></i>
-                                        </span>
-                                        <span class="text">Remove</span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div> -->
 
                     </div>
 
@@ -503,19 +392,22 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <form>
+                    <form method="POSTS" action="{{route('admin.inventory.submit')}}">
+                    @csrf
                         <div class="modal-body mx-3">
                             <div class="form-group">
                                 <label for="email1">Product Name</label>
-                                <select class="form-control" id="sel1">
+                                <select name="product" class="form-control" id="product">
                                     @if(count($products) > 0)
                                     @foreach($products as $product)
-                                    <option>{{$product->productName}}</option>
+                                    <option id="{{$product->productID}}">{{$product->productName}}</option>
                                     @endforeach
                                     @else
                                     <p>No available products</p>
                                     @endif
                                 </select>
+                                <label>Product Description</label>
+                                <textarea class="form-control" id="desc" name="desc"></textarea>
                                 <label>Quantity</label>
                                 <input type="number" class="form-control" id="qty" name="qty"
                                     placeholder="Enter Quantity">
@@ -533,7 +425,7 @@
                             </div>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-success">Submit</button>
+                            <button type="submit" class="btn btn-success">Submit</button>
                         </div>
                     </form>
 
