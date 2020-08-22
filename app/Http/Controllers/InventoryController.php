@@ -64,29 +64,24 @@ class InventoryController extends Controller
         $categoryID = DB::table('products')->where('productID',$request->product)->value('categoryID');
 
         // $inventory = new Inventory;
-        // $inventory->farmerID = $user->id;
+        // // $inventory->farmerID = $user->id;
         // $inventory->productID = $request->product;
         // $inventory->productDescription = $request->desc;
-        // $inventory->categoryID = $categoryID;
+        // // $inventory->categoryID = $categoryID;
         // $inventory->qty = $request->qty;
         // $inventory->price = $request->price;
-        // print_r($inventory);
+        // info('SULOD');
         // $inventory->save();
 
-        // return redirect('/inventory');
+        $productID = $request->input('product');
+        $productDescription = $request->input('desc');
+        $qty = $request->input('qty');
+        $price = $request->input('price');
 
-            // $admin = Inventory::create([
-            //     'farmerID' => $user->id,
-            //     'productID' => $request->product,
-            //     'productDescription' => $request->desc,
-            //     'categoryID' => $categoryID,
-            //     'qty' => $request->qty,
-            //     'price' => $request->price
-            // ]);
+        $data=array('productID'=>$productID);
+        DB::table('test')->insert($data);
 
-            // DB::insert('insert into invetories (farmerID,productID,productDescription, cateor) values(?)',[$category]);
-
-            return $categoryID;
+        return redirect()->route('admin.inventory.dashboard');
     }
 
     /**
