@@ -27,7 +27,7 @@ Route::prefix('farmer')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin.dashboard');
     Route::get('/inventory', 'InventoryController@index')->name('admin.inventory');
     //insert data
-    Route::post('/inventory', 'InventoryController@store')->name('admin.inventory.submit');
+    Route::get('/inventory/submit', 'InventoryController@store')->name('admin.inventory.submit');
 
     // Login routes
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('admin.login');

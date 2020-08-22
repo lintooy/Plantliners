@@ -73,8 +73,7 @@ class InventoryController extends Controller
         $inventory->qty = $request->qty;
         $inventory->price = $request->price;
         $inventory->save();
-
-        // return $inventory->save();
+        
         return redirect()->route('admin.inventory');
     }
 
