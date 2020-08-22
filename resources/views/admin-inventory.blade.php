@@ -252,7 +252,8 @@
                                     <p>Quantity: <strong>324</strong></p>
                                     <p>Price: <strong>₱90.00</strong></p>
                                     <hr>
-                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal"
+                                data-target="#updateProductModal">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-edit"></i>
                                         </span>
@@ -288,7 +289,8 @@
                                     <p>Quantity: <strong>324</strong></p>
                                     <p>Price: <strong>₱90.00</strong></p>
                                     <hr>
-                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal"
+                                data-target="#updateProductModal">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-edit"></i>
                                         </span>
@@ -324,7 +326,8 @@
                                     <p>Quantity: <strong>324</strong></p>
                                     <p>Price: <strong>₱90.00</strong></p>
                                     <hr>
-                                    <a href="#" class="btn btn-primary btn-icon-split">
+                                    <a href="#" class="btn btn-primary btn-icon-split" data-toggle="modal"
+                                data-target="#updateProductModal">
                                         <span class="icon text-white-50">
                                             <i class="fas fa-edit"></i>
                                         </span>
@@ -471,16 +474,62 @@
                                     <option>Apply</option>
                                 </select>
                                 <label>Category</label>
-                                <input type="text" class="form-control" id="category" name="text" value="Banana"
+                                <input type="text" class="form-control" id="category" name="text" value="Fruits"
                                     readonly>
                                 <label>Quantity</label>
-                                <input type="number" class="form-control" id="price" name="price"
-                                    placeholder="Enter Price">
+                                <input type="number" class="form-control" id="qty" name="qty"
+                                    placeholder="Enter Quantity">
                                 <div class="row">
                                     <div class="col-sm-9">
                                         <label>Price</label>
-                                        <input type="number" class="form-control" id="qty" name="qty"
-                                            placeholder="Enter quantity">
+                                        <input type="number" class="form-control" id="price" name="price"
+                                            placeholder="Enter Price">
+                                    </div>
+                                    <div class="col-sm-3">
+                                        <label>UM</label>
+                                        <input type="text" class="form-control" id="um" name="um" value="kg" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success">Submit</button>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Update Product Modal -->
+        <div class="modal fade" id="updateProductModal" tabindex="-1" role="dialog" aria-labelledby="updateProductModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center">
+                        <h4 class="modal-title w-100 font-weight-bold" id="updateProductModalLabel">Update Product
+                        </h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <form>
+                        <div class="modal-body mx-3">
+                            <div class="form-group">
+                                <label for="email1">Product Name</label>
+                                <input type="text" class="form-control" id="category" name="text" value="Banana"
+                                    readonly>
+                                <label>Category</label>
+                                <input type="text" class="form-control" id="category" name="text" value="Fruits"
+                                    readonly>
+                                <label>Quantity</label>
+                                <input type="number" class="form-control" id="qty" name="qty" value="324">
+                                <div class="row">
+                                    <div class="col-sm-9">
+                                        <label>Price</label>
+                                        <input type="number" class="form-control" id="price" name="price"
+                                            value="90.00">
                                     </div>
                                     <div class="col-sm-3">
                                         <label>UM</label>
