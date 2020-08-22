@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Auth;
 use App\Inventory;
 use App\Product;
+use DB;
 
 class InventoryController extends Controller
 {
@@ -61,27 +62,20 @@ class InventoryController extends Controller
         ]);
 
         $user = auth()->user();
-        $categoryID = DB::table('products')->where('productID',$request->product)->value('categoryID');
+        $productID = DB::table('products')->where('productName',$request->product)->value('productID');
+        $categoryID = DB::table('products')->where('productName',$request->product)->value('categoryID');
 
-        // $inventory = new Inventory;
-        // // $inventory->farmerID = $user->id;
-        // $inventory->productID = $request->product;
-        // $inventory->productDescription = $request->desc;
-        // // $inventory->categoryID = $categoryID;
-        // $inventory->qty = $request->qty;
-        // $inventory->price = $request->price;
-        // info('SULOD');
-        // $inventory->save();
+        $inventory = new Inventory;
+        $inventory->farmerID = $user->id;
+        $inventory->productID = $productID;
+        $inventory->productDescription = $request->desc;
+        $inventory->categoryID = $categoryID;
+        $inventory->qty = $request->qty;
+        $inventory->price = $request->price;
+        $inventory->save();
 
-        $productID = $request->input('product');
-        $productDescription = $request->input('desc');
-        $qty = $request->input('qty');
-        $price = $request->input('price');
-
-        $data=array('productID'=>$productID);
-        DB::table('test')->insert($data);
-
-        return redirect()->route('admin.inventory.dashboard');
+        // return $inventory->save();
+        return redirect()->route('admin.inventory');
     }
 
     /**
