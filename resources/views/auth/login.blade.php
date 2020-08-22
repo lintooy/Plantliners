@@ -66,21 +66,22 @@
                                         <button type="submit" class="btn btn-primary btn-user btn-block">
                                             {{ __('Login') }}
                                         </button>
-
-                                        <!-- <div class="form-group row mb-0">
-                                            <div class="col-md-8 offset-md-4">
-                                                <button type="submit" class="btn btn-primary">
-                                                    {{ __('Login') }}
-                                                </button>
-
-                                                @if (Route::has('password.request'))
-                                                <a class="btn btn-link" href="{{ route('password.request') }}">
-                                                    {{ __('Forgot Your Password?') }}
-                                                </a>
-                                                @endif
-                                            </div>
-                                        </div> -->
+                                        <hr>
+                                        <a href="{{route('admin.register')}}" class="btn btn-google btn-user btn-block">
+                                            Register as <strong>Farmer</strong>
+                                        </a>
+                                        <a href="{{route('register')}}" class="btn btn-google btn-user btn-block">
+                                            Register as <strong>Vendor</strong>
+                                        </a>
                                     </form>
+                                    <hr>
+                                    <div class="text-center">
+                                    @if (Route::has('password.request'))
+                                        <a class="small" href="{{ route('password.request') }}">
+                                            {{ __('Forgot Your Password?') }}
+                                        </a>
+                                    @endif
+                                    </div>
                                 </div>
                             </div>
                         </div>
