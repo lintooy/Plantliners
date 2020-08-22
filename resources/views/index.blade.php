@@ -94,7 +94,7 @@
 
     </section>
 
-    <footer>
+    <footer id="footer">
         <p>Copyright © Plantliners (Impact Hackathon Demo)</p>
     </footer>
 </body>
