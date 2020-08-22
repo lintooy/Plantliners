@@ -121,7 +121,6 @@ class InventoryController extends Controller
     {
         $inventory = DB::table('inventories')->where('inventoryID',$id);
         $inventory->delete();
-        
         return redirect()->route('admin.inventory');
     }
 }
