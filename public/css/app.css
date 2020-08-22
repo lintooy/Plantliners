@@ -26486,3 +26486,72 @@ body.sidebar-toggled footer.sticky-footer {
   width: 100%;
 }
 
+.nav-link {
+  color: black;
+  font-weight: bold;
+  font-size: xxx-large;
+}
+
+.curvebg {
+  height: 800px;
+  width: 100%;
+  border-radius: 50%/0 0 500px 30px;
+  background-color: #ebebeb;
+}
+
+.btnFarmer {
+  /* float: right; */
+  margin-top: 10%;
+  border: none;
+  border-radius: 1.5rem;
+  padding: 4%;
+  background: #D1602A;
+  color: white;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+}
+
+.customsection {
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+#intro {
+  height: 80vh;
+}
+
+#about {
+  background-color: #D1602A;
+  height: 96vh;
+}
+
+.description {
+  margin-left: 6%;
+  margin-top: -100px;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.card {
+  background: white;
+  border-radius: 2px;
+  display: inline-block;
+  height: 300px;
+  margin: 1rem;
+  position: relative;
+  width: 90%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #D1602A;
+  color: white;
+}
+
+#prof_img {
+  border-radius: 50%;
+}
+
